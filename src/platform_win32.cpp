@@ -1,3 +1,5 @@
+#ifdef _WIN32
+
 #ifndef WIN32_LEAN_AND_MEAN
 	#define WIN32_LEAN_AND_MEAN
 #endif
@@ -152,3 +154,6 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdLine, int cmd
     ShutdownDirect3D();
     return (int)msg.wParam;
 }
+
+#endif
+/* So now this is an empty unit and the compiler can ignore it :3 */

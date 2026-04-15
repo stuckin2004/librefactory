@@ -34,6 +34,6 @@ done
 
 echo "Linking..."
 clang++ -o "$OUT/librefactory" "$OUT"/*.o \
-    -lm -ldl $GL_LIBS -lminiaudio
+    -lm -ldl $GL_LIBS
 
 echo "Done."
