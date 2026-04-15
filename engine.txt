@@ -25,4 +25,9 @@ The Engine Internals
 How it's exposed to Lua and end-users
 ===============================================================================
 
-...
+The engine is exposed through the Lua virtual machine that looks for mods in
+the "mods" directory that should be placed alongside the final built binary.
+One mod is non-negotiable; "Base" ... since it contains core game functions
+that are needed to even start properly. You can modify the Base but removing
+it will crash the process and render the game unusable without drastic changes
+to the actual C++ code.
