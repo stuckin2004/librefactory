@@ -1,4 +1,4 @@
-== LibreFactory ==
+=== LibreFactory ===
 
 LibreFactory is an open-source implementation of Factorio[1] written in C++, 
 which is also targeting very... low powered hardware. That hardware being from
@@ -23,3 +23,5 @@ piece of tooling completely negates the need for a build system, it IS the
 build system. The build script also takes in arguments, to run it, you'll need
 to use the Developer Command Prompt that comes installed with Visual Studio.
 (( this project doesn't use gcc or mingw to avoid additional suffering ))
+
+If compiling for non-Windows targets, please use the '' C++03 '' standard!

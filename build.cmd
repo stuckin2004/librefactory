@@ -14,7 +14,8 @@ set "DEPS=%ROOT%deps"
 set "OUT=%ROOT%out"
 set "INC=/I"%ROOT%include" /I"%DEPS%\miniaudio" /I"%DEPS%\lua""
 
-set "DEFINES=/D_WIN32_WINNT=0x0501 /DWINVER=0x0501"
+rem Need this because Lua produces many warnings
+set "DEFINES=/D_WIN32_WINNT=0x0501 /DWINVER=0x0501 /D_CRT_SECURE_NO_WARNINGS"
 set "CFLAGS=/O2 /W3 /nologo %DEFINES% %INC%"
   
 if not exist "%OUT%" md "%OUT%"
@@ -28,13 +29,13 @@ lib /nologo "%OUT%\lua*.obj" /OUT:"%OUT%\lua52.lib"
 popd
 
 echo Building game sources...
-for /f "delims=" %%f in ('dir /b /a-d "%SRC%\*.c"') do (
+for /f "delims=" %%f in ('dir /b /a-d "%SRC%\*.cpp"') do (
     cl %CFLAGS% /MT /c "%SRC%\%%f" /Fo"%OUT%\%%~nf.obj"
 )
 
 echo Linking...
 link /nologo /OUT:"%OUT%\librefactory.exe" /subsystem:windows ^
-    "%OUT%\*.obj" "%OUT%\lua52.lib" ^
-    kernel32.lib user32.lib winmm.lib opengl32.lib glu32.lib
+    "%OUT%\*.obj" ^
+    kernel32.lib user32.lib winmm.lib opengl32.lib
 
 echo Done.
