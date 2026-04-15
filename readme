@@ -1,4 +1,6 @@
-=== LibreFactory ===
+===============================================================================
+LibreFactory
+===============================================================================
 
 LibreFactory is an open-source implementation of Factorio[1] written in C++, 
 which is also targeting very... low powered hardware. That hardware being from
@@ -16,7 +18,9 @@ very important, and it's under the generally very permissive MIT license.
 
 [1] https://factorio.com/
 
-=== How do I build this? ===
+===============================================================================
+How do I build this? 
+===============================================================================
 
 With the soon-to-be-implemented build script, '' build.cmd '' ! This handy lil
 piece of tooling completely negates the need for a build system, it IS the
@@ -29,7 +33,9 @@ If/when compiling for non-Windows targets (Linux, OSX, BSD), we recommend that
 you use LLVM/clang based compilers. GCC is completely fine, this is just a
 suggestion!
 
-=== What about Lua? ===
+===============================================================================
+What about Lua?
+===============================================================================
 
 Lua[1] is an embedded scripting language built in C and used in this project
 under the MIT license. Lua is also the same scripting language used in Factorio.

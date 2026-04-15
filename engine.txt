@@ -1,0 +1,28 @@
+===============================================================================
+Engine layout & Design
+===============================================================================
+
+So the engine and app, pretty complex, since its entirely custom C++ engine
+built entirely in Windows XP, both VMs and actual hardware. So the overall
+restrictions on hardware, and code are intense. For example: on the VM that
+I've been testing on the past couple days (whilst waiting on a part for my
+physical PC) has been given only two (2) cores and two (2) gigabytes of RAM.
+It also has just a mere 32MB of vRAM, at least to my knowledge of QEMU.
+
+So, it runs god awful, especially since I never bothered to install drivers.
+The physical machine will likely run the same way, being as far as I know;
+just one (1) core and only 512M of usable RAM. But I think hardware accel. will
+be saving that machine. Anyways! This doc goes over the structure of the engine
+and some light implementation notes, full per-function docs in the docs folder.
+
+===============================================================================
+The Engine Internals
+===============================================================================
+
+...
+
+===============================================================================
+How it's exposed to Lua and end-users
+===============================================================================
+
+...
