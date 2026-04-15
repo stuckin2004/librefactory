@@ -5,7 +5,6 @@ cls
 rem This assumes that you've got git installed on your system already.
 rem If not, you can get Git 2.10 for Windows here vv
 rem https://github.com/git-for-windows/git/releases/tag/v2.10.0.windows.1
-rem
 
 set "DEPS_DIR=%~dp0deps"
 
@@ -20,9 +19,9 @@ md "%DEPS_DIR%"
 pushd "%DEPS_DIR%"
 
 echo Cloning miniaudio...
-git clone --depth 1 https://github.com/mackron/miniaudio.git
+git clone --depth 1 https://github.com/mackron/miniaudio.git >nul
 
 echo Cloning Lua 5.2.3...
-git clone --depth 1 --branch v5.2.3 https://github.com/lua/lua.git
+git clone --depth 1 --branch v5.2.3 https://github.com/lua/lua.git >nul
 
 popd
