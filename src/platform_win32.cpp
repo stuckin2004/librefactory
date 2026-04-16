@@ -46,7 +46,7 @@ bool InitDirect3D(HWND hwnd, int width, int height)
 	{
 		char buf[64];
 		wsprintfA(buf, "CreateDevice failed: 0x%08X", (unsigned long)hr);
-		MessageBox(hwnd, buf, "D3D8 Error", MB_OK | MB_ICONERROR);
+		MessageBox(hwnd, buf, "D3D8 CreateDevice() Error", MB_OK | MB_ICONERROR);
 		return false;
 	}
 
